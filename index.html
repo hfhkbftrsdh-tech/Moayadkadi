@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17382f">
+<title>إنجاز</title>
+<style>
+:root{--bg:#f2f4ee;--card:#fff;--tx:#14302a;--mut:#5f7169;--ac:#0f5c4a;--acx:#fff;--line:#dbe2d8;--fl:#e8890c;--bad:#b3402f;--hl:#e3f1ea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a2b;--card:#16263c;--tx:#e8eef5;--mut:#93a4b8;--ac:#4fc3a1;--acx:#08201a;--line:#27384f;--fl:#ffb02e;--bad:#ef7a68;--hl:#1b3a45}}
+:root[data-theme="dark"]{--bg:#0e1a2b;--card:#16263c;--tx:#e8eef5;--mut:#93a4b8;--ac:#4fc3a1;--acx:#08201a;--line:#27384f;--fl:#ffb02e;--bad:#ef7a68;--hl:#1b3a45}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:500 16px/1.6 Tajawal,Tahoma,sans-serif;padding-bottom:84px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.fl{font-size:30px;line-height:1}.off{filter:grayscale(1);opacity:.35}
+header h1{margin:0;font-size:20px;font-weight:800;flex:1}header small{color:var(--mut);display:block;font-weight:500;font-size:13px}
+main{padding:12px 14px;max-width:640px;margin:auto}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px}
+.card.now{border:2px solid var(--ac);background:var(--hl)}
+h2{font-size:17px;margin:0 0 8px;font-weight:800}h3{font-size:15px;margin:0;font-weight:700}
+.row{display:flex;align-items:center;gap:8px}.sp{flex:1}.mut{color:var(--mut);font-size:13px}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:10px;padding:6px 12px}
+button.p{background:var(--ac);color:var(--acx);border-color:var(--ac);font-weight:700}
+button.g{border:0;background:none;color:var(--mut);padding:4px 8px}
+.it{display:flex;align-items:center;gap:8px;padding:7px 0;border-top:1px solid var(--line)}
+.ck{width:26px;height:26px;border-radius:8px;border:2px solid var(--ac);padding:0;flex:none;font-size:15px;line-height:1;background:none;color:var(--acx)}
+.ck.on{background:var(--ac)}.done{text-decoration:line-through;color:var(--mut)}
+.tag{font-size:11px;background:var(--hl);color:var(--ac);border-radius:6px;padding:0 6px;font-weight:700}
+.pt{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;text-align:center;font-size:12px}
+.pt b{display:block;font-size:13px;font-weight:700}
+.bar{height:12px;background:var(--line);border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ac)}
+nav{position:fixed;bottom:0;inset-inline:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px);z-index:6}
+nav button{flex:1;border:0;border-radius:0;background:none;font-size:10.5px;padding:7px 0 5px;color:var(--mut);line-height:1.3}
+nav button span{display:block;font-size:19px}nav button.on{color:var(--ac);font-weight:800}
+input,select{font:inherit;width:100%;padding:9px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx)}
+label{display:block;font-size:13px;color:var(--mut);margin:8px 0 3px}
+#md{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:20;display:none;align-items:flex-end;justify-content:center}
+#md>div{background:var(--card);width:100%;max-width:640px;max-height:90%;overflow:auto;border-radius:18px 18px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.days{display:flex;gap:4px}.days button{flex:1;padding:6px 0;font-size:12px}.days button.on{background:var(--ac);color:var(--acx)}
+.q{display:grid;grid-template-columns:1fr 1fr;gap:10px}.q .card{margin:0;padding:10px;min-height:120px}
+.bars{display:flex;align-items:flex-end;gap:3px;height:120px;margin-top:6px}
+.bc{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font-size:9px;color:var(--mut)}
+.bc i{width:100%;background:var(--ac);border-radius:4px 4px 0 0;min-height:2px;opacity:.55}.bc.best i{opacity:1;background:var(--fl)}
+#ts{position:fixed;top:calc(64px + env(safe-area-inset-top,0px));inset-inline:12px;z-index:30;background:var(--ac);color:var(--acx);padding:10px 14px;border-radius:12px;font-weight:700;display:none}
+.empty{color:var(--mut);text-align:center;padding:14px;font-size:14px}
+</style>
+</head>
+<body>
+<header><span class="fl" id="hf">🔥</span><h1>إنجاز<small id="hd"></small></h1><span id="hc" class="mut"></span></header>
+<div id="ts"></div>
+<main id="m"></main>
+<nav id="nv"></nav>
+<div id="md"><div id="mb"></div></div>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])),uid=()=>Math.random().toString(36).slice(2,9);
+const ALL=[0,1,2,3,4,5,6],DN=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const PN=['الفجر','الشروق','الظهر','العصر','المغرب','العشاء'];
+const BN=['الفجر ← الشروق','الضحى','الظهر ← العصر','العصر ← المغرب','المغرب ← العشاء','بعد العشاء'];
+const TY=[['w','عمل'],['r','قراءة قرآن'],['m','مراجعة قرآن'],['d','تدبر']],TL={w:'عمل',r:'قراءة',m:'مراجعة',d:'تدبر'};
+let S=null;try{S=JSON.parse(localStorage.getItem('injaz'))}catch(e){}
+S=Object.assign({plan:{},fixed:null,goals:[],gl:{},habits:[],hl:{},tasks:[],ev:[],al:[],sp:{},conf:null},S||{});
+S.set=Object.assign({theme:'auto',target:80,cur:'ل.س',fa:18,ia:17,sens:2},S.set||{});
+if(!S.fixed)S.fixed=[{id:uid(),t:'ورد القراءة',b:0,ty:'r',d:ALL},{id:uid(),t:'مراجعة المحفوظ',b:3,ty:'m',d:ALL},{id:uid(),t:'تدبر آيات',b:5,ty:'d',d:ALL}];
+const sv=()=>{try{localStorage.setItem('injaz',JSON.stringify(S))}catch(e){}};
+/* ===== الوقت (توقيت سوريا UTC+3) ===== */
+const sy=()=>new Date(Date.now()+108e5),kOf=d=>d.toISOString().slice(0,10),today=()=>kOf(sy());
+const nowM=()=>{const d=sy();return d.getUTCHours()*60+d.getUTCMinutes()};
+const addD=(k,n)=>{const d=new Date(k+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+n);return kOf(d)},wd=k=>new Date(k+'T00:00:00Z').getUTCDay();
+const fmt=m=>{m=Math.round(m);const h=Math.floor(m/60)%24,i=m%60;return (h%12||12)+':'+String(i).padStart(2,'0')+(h<12?' ص':' م')};
+const R_=Math.PI/180,sin=a=>Math.sin(a*R_),cos=a=>Math.cos(a*R_),tan=a=>Math.tan(a*R_),asin=x=>Math.asin(x)/R_,acos=x=>Math.acos(Math.max(-1,Math.min(1,x)))/R_,at2=(y,x)=>Math.atan2(y,x)/R_,fx=(a,b)=>a-b*Math.floor(a/b);
+function times(k){const[y,m,d]=k.split('-').map(Number),LAT=33.5138,LNG=36.2765,D=Date.UTC(y,m-1,d,9)/864e5+2440587.5-2451545;
+const g=fx(357.529+.98560028*D,360),q=fx(280.459+.98564736*D,360),L=fx(q+1.915*sin(g)+.02*sin(2*g),360),e=23.439-3.6e-7*D;
+const RA=fx(at2(cos(e)*sin(L),cos(L))/15,24),eq=fx(q/15-RA+12,24)-12,dc=asin(sin(e)*sin(L)),noon=15-LNG/15-eq;
+const T=a=>acos((-sin(a)-sin(dc)*sin(LAT))/(cos(dc)*cos(LAT)))/15;
+const A=acos((sin(at2(1,1+tan(Math.abs(LAT-dc))))-sin(dc)*sin(LAT))/(cos(dc)*cos(LAT)))/15;
+return [noon-T(S.set.fa),noon-T(.833),noon+1/60,noon+A,noon+T(.833),noon+T(S.set.ia)].map(h=>Math.round(h*60))}
+const blocks=k=>{const t=times(k),e=t.concat([1440]);return t.map((s,i)=>[s,e[i+1]])};
+const curB=()=>{const n=nowM();return blocks(today()).findIndex(r=>n>=r[0]&&n<r[1])};
+/* ===== البيانات ===== */
+function ens(k){if(!S.plan[k]){const w=wd(k);S.plan[k]=S.fixed.filter(f=>f.d.includes(w)).map(f=>({id:uid(),t:f.t,b:f.b,ty:f.ty,done:false,fx:f.id}));sv()}return S.plan[k]}
+const pct=k=>{const p=S.plan[k];if(!p)return null;const tot=p.length+S.habits.length;if(!tot)return null;return Math.round((p.filter(i=>i.done).length+S.habits.filter(h=>(S.hl[k]||{})[h.id]).length)*100/tot)};
+const dayOk=k=>{const p=pct(k);return p!==null&&p>=S.set.target};
+const gOk=(g,k)=>{if((S.gl[k]||{})[g.id])return true;const l=(S.plan[k]||[]).filter(i=>i.g===g.id);return l.length>0&&l.every(i=>i.done)};
+function streak(fn){let k=today(),c=0;if(fn(k))c++;k=addD(k,-1);while(c<2000&&fn(k)){c++;k=addD(k,-1)}return c}
+/* ===== واجهة ===== */
+let tab='today',vd=today(),lastB=-2;
+const TABS=[['today','🏠','اليوم'],['mx','🧭','المصفوفة'],['hb','✅','العادات'],['gl','🎯','الأهداف'],['ag','📅','المواعيد'],['rp','📊','التقارير'],['st','⚙️','الإعدادات']];
+function theme(){let t=S.set.theme;if(t==='auto'){const x=times(today()),n=nowM();t=(n<x[1]||n>=x[4])?'dark':'light'}document.documentElement.dataset.theme=t}
+function toast(s){const e=$('#ts');e.textContent=s;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',6000)}
+function beep(){try{const c=new(window.AudioContext||window.webkitAudioContext)();[0,.4,.8].forEach(d=>{const o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=880;g.gain.value=.2;o.start(c.currentTime+d);o.stop(c.currentTime+d+.25)})}catch(e){}}
+function fire(s,snd){toast(s);if(snd)beep();try{if(window.Notification&&Notification.permission==='granted')new Notification('إنجاز',{body:s})}catch(e){}}
+function chips(){return ''}
+function bsel(v){return blocks(vd).map((r,i)=>`<option value="${i}" ${i==v?'selected':''}>${BN[i]} (${fmt(r[0])})</option>`).join('')}
+function R(){theme();$('#nv').innerHTML=TABS.map(t=>`<button data-a="tab" data-x="${t[0]}" class="${tab===t[0]?'on':''}"><span>${t[1]}</span>${t[2]}</button>`).join('');
+const c=streak(dayOk);$('#hf').className='fl'+(c?'':' off');$('#hc').textContent=c?c+' يوم':'انطفأت';
+$('#hd').textContent=DN[wd(vd)]+' '+vd;$('#m').innerHTML=V[tab]()}
+const V={};
+V.today=()=>{const k=vd,p=ens(k),t=times(k),bl=blocks(k),isT=k===today(),cb=isT?curB():-1,pc=pct(k)||0;
+let h='';
+const evs=S.ev.filter(e=>e.d===k||e.d===addD(k,1)&&isT);
+if(evs.length)h+=`<div class="card" style="border-color:var(--fl)"><h3>⭐ مهم</h3>${evs.map(e=>`<div class="mut">${e.d===k?'اليوم':'غدًا'}${e.m!=null?' '+fmt(e.m):''}: <b style="color:var(--tx)">${esc(e.t)}</b></div>`).join('')}</div>`;
+if(cb>=0){const n=p.filter(i=>i.b===cb&&!i.done);h+=`<div class="card now"><h3>🕌 ${BN[cb]}</h3><div>${n.length?n.map(i=>'وقت '+(i.ty==='w'?'العمل':TL[i.ty])+': <b>'+esc(i.t)+'</b>').join('<br>'):'لا مهام معلّقة في هذه الفترة'}</div></div>`}
+h+=`<div class="row" style="margin-bottom:8px"><button data-a="nav" data-x="-1">›</button><span class="sp" style="text-align:center">${isT?'اليوم':''}<button class="g" data-a="goto">${isT?'':'العودة لليوم'}</button></span><button data-a="nav" data-x="1">‹</button></div>`;
+h+=`<div class="card"><div class="pt">${PN.map((n,i)=>`<div>${n}<b>${fmt(t[i])}</b></div>`).join('')}</div><div class="mut" style="text-align:center;margin-top:6px">بتوقيت سوريا (دمشق)</div></div>`;
+h+=`<div class="card"><div class="row"><h3 class="sp">أداء اليوم</h3><b>${pc}%</b></div><div class="bar" style="margin:8px 0"><i style="width:${pc}%"></i></div><div class="mut">${pc>=100?'ما شاء الله، يوم مكتمل':pc>=S.set.target?'أحسنت، الشعلة مضيئة':pc>=50?'اقتربت، أكمل ما تبقى':'ابدأ بأول مهمة في قائمتك'}</div></div>`;
+bl.forEach((r,i)=>{const its=p.filter(x=>x.b===i);h+=`<div class="card ${i===cb?'now':''}"><div class="row"><h3 class="sp">${BN[i]}</h3><span class="mut">${fmt(r[0])} – ${r[1]>=1440?'12:00 ص':fmt(r[1])}</span></div>${its.map(x=>`<div class="it"><button class="ck ${x.done?'on':''}" data-a="tg" data-x="${x.id}">${x.done?'✓':''}</button><span class="sp ${x.done?'done':''}">${esc(x.t)} ${x.ty!=='w'?`<span class="tag">${TL[x.ty]}</span>`:''}${x.fx?' <span class="mut">↻</span>':''}</span><button class="g" data-a="del" data-x="${x.id}">✕</button></div>`).join('')}<div style="margin-top:6px"><button class="g" data-a="add" data-x="${i}">+ إضافة عمل</button></div></div>`});
+return h};
+V.mx=()=>{const Q=[[1,'عاجل ومهم','افعلها الآن'],[2,'غير عاجل مهم','جدولها'],[3,'عاجل غير مهم','فوّضها أو قلّصها'],[4,'غير عاجل غير مهم','تخلّص منها']];
+return `<p class="mut">وزّع مهامك ثم أرسل ما تريد إلى خطة اليوم بزر 📅.</p><div class="q">${Q.map(q=>`<div class="card"><h3>${q[1]}</h3><div class="mut">${q[2]}</div>${S.tasks.filter(t=>t.q===q[0]).map(t=>`<div class="it" style="flex-wrap:wrap"><button class="ck ${t.done?'on':''}" data-a="tt" data-x="${t.id}">${t.done?'✓':''}</button><span class="sp ${t.done?'done':''}" style="font-size:14px">${esc(t.t)}</span><button class="g" data-a="ts" data-x="${t.id}">📅</button><button class="g" data-a="td" data-x="${t.id}">✕</button></div>`).join('')}<button class="g" data-a="ta" data-x="${q[0]}">+ مهمة</button></div>`).join('')}</div>`};
+V.hb=()=>{const k=today();return `<div class="card"><h2>عادات اليوم</h2>${S.habits.length?S.habits.map(h=>{const on=(S.hl[k]||{})[h.id],c=streak(d=>(S.hl[d]||{})[h.id]);return `<div class="it"><button class="ck ${on?'on':''}" data-a="hh" data-x="${h.id}">${on?'✓':''}</button><span class="sp">${esc(h.t)}</span><span class="mut">🔥 ${c}</span><button class="g" data-a="hd" data-x="${h.id}">✕</button></div>`}).join(''):'<div class="empty">لا عادات بعد. أضف أول عادة.</div>'}<button class="p" style="margin-top:10px" data-a="ha">+ عادة جديدة</button></div>`};
+V.gl=()=>`<p class="mut">لكل هدف شعلته الخاصة. تضيء الشعلة بتأشير «تم اليوم»، أو تلقائيًا إذا أنجزت كل الأعمال المرتبطة بالهدف في خطة اليوم.</p>${S.goals.length?S.goals.map(g=>{const c=streak(d=>gOk(g,d)),on=gOk(g,today());return `<div class="card"><div class="row"><span class="fl ${c?'':'off'}">🔥</span><div class="sp"><h3>${esc(g.t)}</h3><div class="mut">${c?c+' يوم متتالٍ':'انطفأت الشعلة'}</div></div><button class="${on?'p':''}" data-a="gc" data-x="${g.id}">${on?'تم اليوم ✓':'تم اليوم'}</button><button class="g" data-a="gd" data-x="${g.id}">✕</button></div></div>`}).join(''):'<div class="empty">لا أهداف بعد.</div>'}<button class="p" data-a="ga">+ هدف جديد</button>`;
+V.ag=()=>{const ev=S.ev.filter(e=>e.d>=today()).sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:(a.m||0)-(b.m||0));
+return `<div class="card"><h2>مواعيد وأمور مهمة</h2>${ev.length?ev.map(e=>`<div class="it"><div class="sp"><b>${esc(e.t)}</b><div class="mut">${e.d}${e.m!=null?' – '+fmt(e.m):''}</div></div><button class="g" data-a="ed" data-x="${e.id}">✕</button></div>`).join(''):'<div class="empty">لا مواعيد قادمة.</div>'}<button class="p" style="margin-top:8px" data-a="ea">+ موعد جديد</button></div>
+<div class="card"><h2>أعمال ثابتة في أيام محددة</h2>${S.fixed.map(f=>`<div class="it"><div class="sp">${esc(f.t)} <span class="tag">${TL[f.ty]}</span><div class="mut">${f.d.length===7?'كل يوم':f.d.map(d=>DN[d]).join('، ')} – ${BN[f.b]}</div></div><button class="g" data-a="fd" data-x="${f.id}">✕</button></div>`).join('')||'<div class="empty">لا أعمال ثابتة.</div>'}<div class="mut" style="margin-top:6px">لإضافة عمل ثابت: افتح «اليوم» ← «+ إضافة عمل» واختر الأيام.</div></div>`};
+function bars(a,lab,fmtv){const mx=Math.max(1,...a.map(v=>v||0)),b=a.indexOf(Math.max(...a.map(v=>v||0)));return `<div class="bars">${a.map((v,i)=>`<div class="bc ${i===b&&v>0?'best':''}">${v?fmtv(v):''}<i style="height:${(v||0)/mx*80}%"></i>${lab[i]}</div>`).join('')}</div>`}
+V.rp=()=>{const k=today(),ds=[...Array(14)].map((_,i)=>addD(k,i-13)),ps=ds.map(pct),lab=ds.map(d=>+d.slice(8));
+let best=-1,bi=-1;ps.forEach((v,i)=>{if(v!==null&&v>best){best=v;bi=i}});
+const ag={};Object.keys(S.plan).forEach(d=>{const p=pct(d);if(p!==null){(ag[wd(d)]=ag[wd(d)]||[]).push(p)}});
+const av=ALL.map(w=>ag[w]?Math.round(ag[w].reduce((a,b)=>a+b)/ag[w].length):0);
+const sp=ds.map(d=>(S.sp[d]||[]).reduce((a,b)=>a+b.a,0)),mo=Object.keys(S.sp).filter(d=>d.slice(0,7)===k.slice(0,7)).reduce((a,d)=>a+S.sp[d].reduce((x,y)=>x+y.a,0),0);
+const cu=S.set.cur;
+return `<div class="card"><h2>الإنجاز آخر 14 يومًا</h2><div class="mut">${bi>=0?'أفضل يوم: '+ds[bi]+' ('+DN[wd(ds[bi])]+') بنسبة '+best+'%':'لا بيانات بعد'}</div>${bars(ps,lab,v=>v)}</div>
+<div class="card"><h2>متوسط الإنجاز حسب اليوم</h2>${bars(av,DN.map(d=>d.slice(0,3)),v=>v+'%')}</div>
+<div class="card"><h2>المصروف اليومي</h2><div class="mut">اليوم: ${sp[13]} ${esc(cu)} — هذا الشهر: ${mo} ${esc(cu)}</div>${bars(sp,lab,v=>v)}${(S.sp[k]||[]).map((x,i)=>`<div class="it"><span class="sp">${esc(x.n||'مصروف')}</span><b>${x.a} ${esc(cu)}</b><button class="g" data-a="xd" data-x="${i}">✕</button></div>`).join('')}<button class="p" style="margin-top:8px" data-a="xa">+ إضافة مصروف اليوم</button></div>`};
+V.st=()=>`<div class="card"><h2>الإعدادات</h2><label>المظهر</label><select data-s="theme">${[['auto','تلقائي (ليلي من المغرب حتى الشروق)'],['light','نهاري'],['dark','ليلي']].map(o=>`<option value="${o[0]}" ${S.set.theme===o[0]?'selected':''}>${o[1]}</option>`).join('')}</select>
+<label>نسبة الإنجاز المطلوبة لإبقاء الشعلة مضيئة (%)</label><input type="number" data-s="target" value="${S.set.target}" min="1" max="100">
+<label>العملة</label><input data-s="cur" value="${esc(S.set.cur)}">
+<label>زاوية الفجر (درجة)</label><input type="number" step="0.5" data-s="fa" value="${S.set.fa}">
+<label>زاوية العشاء (درجة)</label><input type="number" step="0.5" data-s="ia" value="${S.set.ia}">
+<label>إجبار مراجعة الخطة إذا تغير أي وقت صلاة بمقدار (دقائق)</label><input type="number" data-s="sens" value="${S.set.sens}" min="1" max="30"></div>
+<div class="card"><h2>المنبهات (اختيارية)</h2>${S.al.map(a=>`<div class="it"><button class="ck ${a.on?'on':''}" data-a="at" data-x="${a.id}">${a.on?'✓':''}</button><span class="sp"><b>${fmt(a.m)}</b> ${esc(a.t)}</span><button class="g" data-a="ad" data-x="${a.id}">✕</button></div>`).join('')||'<div class="empty">لا منبهات.</div>'}<div class="row" style="margin-top:8px"><button class="p" data-a="aa">+ منبه</button><button data-a="np">تفعيل الإشعارات</button></div><div class="mut" style="margin-top:6px">المنبهات والتذكيرات تعمل والتطبيق مفتوح على الشاشة.</div></div>`;
+document.addEventListener('change',e=>{const k=e.target.dataset.s;if(!k)return;const v=e.target.value;S.set[k]=['theme','cur'].includes(k)?v:Math.max(0,+v);sv();R()});
+/* ===== نماذج ===== */
+function form(title,fs,ok,lock){const mb=$('#mb');mb.innerHTML=`<h2>${title}</h2>${fs.map(f=>`<label>${f.l}</label>`+(f.ty==='sel'?`<select id="f_${f.k}">${f.o}</select>`:f.ty==='days'?`<div class="days" id="f_${f.k}">${DN.map((d,i)=>`<button data-a="dy" data-x="${i}">${d.slice(0,2)}</button>`).join('')}</div>`:`<input id="f_${f.k}" type="${f.ty||'text'}" value="${f.v||''}" ${f.ph?`placeholder="${f.ph}"`:''}>`)).join('')}<div class="row" style="margin-top:14px"><button class="p sp" id="fok">حفظ</button>${lock?'':'<button data-a="cl">إلغاء</button>'}</div>`;
+$('#md').style.display='flex';$('#fok').onclick=()=>{const v={};fs.forEach(f=>{const e=$('#f_'+f.k);v[f.k]=f.ty==='days'?[...e.children].map((b,i)=>b.classList.contains('on')?i:-1).filter(i=>i>=0):e.value});if(ok(v)!==false){sv();$('#md').style.display='none';R()}}}
+const tm=s=>{if(!s)return null;const[a,b]=s.split(':').map(Number);return a*60+b};
+const gopts=()=>'<option value="">— بلا هدف —</option>'+S.goals.map(g=>`<option value="${g.id}">${esc(g.t)}</option>`).join('');
+const A={
+tab:x=>{tab=x;vd=today();R();scrollTo(0,0)},nav:x=>{vd=addD(vd,+x);R()},goto:()=>{vd=today();R()},cl:()=>{$('#md').style.display='none'},
+dy:(x,y,b)=>b.classList.toggle('on'),
+tg:x=>{const i=ens(vd).find(i=>i.id===x);i.done=!i.done;sv();R()},del:x=>{S.plan[vd]=S.plan[vd].filter(i=>i.id!==x);sv();R()},
+add:x=>form('عمل جديد',[{k:'t',l:'اسم العمل'},{k:'ty',l:'النوع',ty:'sel',o:TY.map(t=>`<option value="${t[0]}">${t[1]}</option>`).join('')},{k:'g',l:'مرتبط بهدف',ty:'sel',o:gopts()},{k:'d',l:'تثبيته وتذكيره في أيام (اتركها فارغة ليومك فقط)',ty:'days'}],v=>{if(!v.t.trim())return false;const it={id:uid(),t:v.t.trim(),b:+x,ty:v.ty,done:false,g:v.g||undefined};ens(vd);if(v.d.length){const f={id:uid(),t:it.t,b:+x,ty:v.ty,d:v.d};S.fixed.push(f);it.fx=f.id}S.plan[vd].push(it)}),
+ta:x=>form('مهمة جديدة',[{k:'t',l:'المهمة'}],v=>{if(!v.t.trim())return false;S.tasks.push({id:uid(),t:v.t.trim(),q:+x,done:false})}),
+tt:x=>{const t=S.tasks.find(t=>t.id===x);t.done=!t.done;sv();R()},td:x=>{S.tasks=S.tasks.filter(t=>t.id!==x);sv();R()},
+ts:x=>{const t=S.tasks.find(t=>t.id===x);vd=today();form('إضافة إلى خطة اليوم',[{k:'b',l:'الفترة',ty:'sel',o:bsel(Math.max(0,curB()))}],v=>{ens(vd).push({id:uid(),t:t.t,b:+v.b,ty:'w',done:false});tab='today'})},
+ha:()=>form('عادة جديدة',[{k:'t',l:'اسم العادة'}],v=>{if(!v.t.trim())return false;S.habits.push({id:uid(),t:v.t.trim()})}),
+hh:x=>{const k=today();S.hl[k]=S.hl[k]||{};S.hl[k][x]=!S.hl[k][x];sv();R()},hd:x=>{S.habits=S.habits.filter(h=>h.id!==x);sv();R()},
+ga:()=>form('هدف جديد',[{k:'t',l:'الهدف (مثال: حفظ جزء عم)'}],v=>{if(!v.t.trim())return false;S.goals.push({id:uid(),t:v.t.trim()})}),
+gc:x=>{const k=today();S.gl[k]=S.gl[k]||{};S.gl[k][x]=!S.gl[k][x];sv();R()},gd:x=>{S.goals=S.goals.filter(g=>g.id!==x);sv();R()},
+ea:()=>form('موعد أو أمر مهم',[{k:'t',l:'ما هو؟'},{k:'d',l:'التاريخ',ty:'date',v:today()},{k:'m',l:'الوقت (اختياري)',ty:'time'}],v=>{if(!v.t.trim()||!v.d)return false;S.ev.push({id:uid(),t:v.t.trim(),d:v.d,m:tm(v.m)})}),
+ed:x=>{S.ev=S.ev.filter(e=>e.id!==x);sv();R()},fd:x=>{S.fixed=S.fixed.filter(f=>f.id!==x);sv();R()},
+xa:()=>form('مصروف جديد',[{k:'a',l:'المبلغ',ty:'number'},{k:'n',l:'على ماذا؟ (اختياري)'}],v=>{if(!(+v.a>0))return false;const k=today();(S.sp[k]=S.sp[k]||[]).push({a:+v.a,n:v.n})}),
+xd:x=>{S.sp[today()].splice(+x,1);sv();R()},
+aa:()=>form('منبه جديد',[{k:'m',l:'الوقت',ty:'time'},{k:'t',l:'الاسم'}],v=>{if(!v.m)return false;S.al.push({id:uid(),m:tm(v.m),t:v.t,on:true})}),
+at:x=>{const a=S.al.find(a=>a.id===x);a.on=!a.on;sv();R()},ad:x=>{S.al=S.al.filter(a=>a.id!==x);sv();R()},
+np:()=>{try{Notification.requestPermission().then(p=>toast(p==='granted'?'تم تفعيل الإشعارات':'لم يُسمح بالإشعارات'))}catch(e){toast('الإشعارات غير مدعومة هنا')}}
+};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(b&&A[b.dataset.a])A[b.dataset.a](b.dataset.x,b.dataset.y,b)});
+/* ===== إجبار مراجعة الخطة عند تغيّر أوقات الصلاة ===== */
+function chk(){const k=today(),t=times(k);if(!S.conf){S.conf={k,t};sv();return}
+const o=S.conf.t,df=t.map((v,i)=>v-o[i]);if(!df.some(d=>Math.abs(d)>=S.set.sens))return;
+const p=ens(k).filter(i=>!i.done);vd=k;
+$('#md').style.display='flex';$('#mb').innerHTML=`<h2>⚠️ تغيّرت أوقات الصلاة</h2><div class="mut">يجب مراجعة خطتك قبل المتابعة:</div>${PN.map((n,i)=>df[i]?`<div class="it"><span class="sp">${n}</span><span class="mut">${fmt(o[i])}</span>←<b>${fmt(t[i])}</b></div>`:'').join('')}<h3 style="margin-top:12px">أعمال اليوم المتبقية: اختر الفترة الجديدة لكل عمل</h3>${p.length?p.map(i=>`<label>${esc(i.t)}</label><select id="m_${i.id}">${bsel(i.b)}</select>`).join(''):'<div class="empty">لا أعمال متبقية.</div>'}<button class="p" style="width:100%;margin-top:14px" id="cf">اعتمدت الخطة الجديدة</button>`;
+$('#cf').onclick=()=>{p.forEach(i=>i.b=+$('#m_'+i.id).value);S.conf={k,t};sv();$('#md').style.display='none';R()}}
+/* ===== المراقبة الدورية: منبهات، مواعيد، تنبيه الفترة ===== */
+let lastKey='',lastDay=today();
+function tick(){const k=today(),n=nowM(),key=k+n;
+if(k!==lastDay){lastDay=k;vd=k;ens(k);chk();R()}
+if(key!==lastKey){lastKey=key;
+S.al.filter(a=>a.on&&a.m===n).forEach(a=>fire('⏰ '+(a.t||'المنبه'),true));
+S.ev.filter(e=>e.d===k&&e.m===n).forEach(e=>fire('⭐ موعد مهم: '+e.t,true));
+const b=curB();if(b!==lastB){if(lastB!==-2&&b>=0){const p=ens(k).filter(i=>i.b===b&&!i.done);fire('🕌 دخلت فترة «'+BN[b]+'»'+(p.length?' — وقت العمل: '+p[0].t:''),false)}lastB=b;if(tab==='today'&&vd===k)R()}}}
+ens(today());chk();R();lastB=curB();setInterval(tick,15000);
+</script>
+</body>
+</html>
